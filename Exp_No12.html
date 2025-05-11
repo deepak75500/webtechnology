@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <h1>To run this use php server</h1>
+    <p>Save this code as <u>factorial.php</u></p>
+    <title>Factorial Calculator</title>
+</head>
+<body>
+
+<h2>Factorial Calculator using PHP</h2>
+
+<form method="post">
+    Enter a number: <input type="number" name="num" required>
+    <input type="submit" value="Calculate">
+</form>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $num = intval($_POST["num"]);
+
+    function factorial($n) {
+        if ($n == 0 || $n == 1) {
+            return 1;
+        } else {
+            return $n * factorial($n - 1);
+        }
+    }
+
+    $result = factorial($num);
+    echo "<h3>Factorial of $num is: $result</h3>";
+}
+?>
+
+<h3>Code Used:</h3>
+<textarea rows="25" cols="100" readonly>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Factorial Calculator&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Factorial Calculator using PHP&lt;/h2&gt;
+
+&lt;form method="post"&gt;
+    Enter a number: &lt;input type="number" name="num" required&gt;
+    &lt;input type="submit" value="Calculate"&gt;
+&lt;/form&gt;
+
+&lt;?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $num = intval($_POST["num"]);
+
+    function factorial($n) {
+        if ($n == 0 || $n == 1) {
+            return 1;
+        } else {
+            return $n * factorial($n - 1);
+        }
+    }
+
+    $result = factorial($num);
+    echo "&lt;h3&gt;Factorial of $num is: $result&lt;/h3&gt;";
+}
+?&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea>
+
+</body>
+</html>

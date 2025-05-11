@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 3 - HTML5 Image Map</title>
+</head>
+<body>
+
+    <h1>Experiment 3: Image Map with Hotspots</h1>
+
+    <h2>Image Map Output</h2>
+    <p>Click on different parts of the image to learn more.</p>
+
+    <!-- Image with Map -->
+    <img src="https://via.placeholder.com/400x200" usemap="#webmap" alt="Sample Map">
+
+    <map name="webmap">
+        <area shape="rect" coords="10,10,150,100" href="https://www.google.com" target="_blank" alt="Google">
+        <area shape="circle" coords="300,100,40" href="https://www.wikipedia.org" target="_blank" alt="Wikipedia">
+    </map>
+
+    <p>
+        🟥 Red rectangle: Opens Google  
+        ⚪ Circle: Opens Wikipedia
+    </p>
+
+    <!-- Code Display -->
+    <h2>HTML Code Used:</h2>
+    <textarea rows="25" cols="100" readonly>
+<!-- Image Map -->
+<img src="https://via.placeholder.com/400x200" usemap="#webmap" alt="Sample Map">
+
+<map name="webmap">
+    <area shape="rect" coords="10,10,150,100" href="https://www.google.com" target="_blank" alt="Google">
+    <area shape="circle" coords="300,100,40" href="https://www.wikipedia.org" target="_blank" alt="Wikipedia">
+</map>
+    </textarea>
+
+</body>
+</html>

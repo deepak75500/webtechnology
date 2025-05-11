@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Effects with Code Display</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <h2>jQuery Effects Demo</h2>
+
+    <button id="hideBtn">Hide</button>
+    <button id="showBtn">Show</button>
+    <button id="toggleBtn">Toggle</button>
+    <button id="fadeBtn">Fade</button>
+
+    <p id="myPara">This is a paragraph. Click buttons to apply jQuery effects.</p>
+
+    <textarea rows="6" cols="50" id="myText">
+You can type something here...
+    </textarea>
+
+    <h3>Code Used:</h3>
+    <textarea rows="15" cols="80" readonly>
+        <!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Effects with Code Display</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <h2>jQuery Effects Demo</h2>
+
+    <button id="hideBtn">Hide</button>
+    <button id="showBtn">Show</button>
+    <button id="toggleBtn">Toggle</button>
+    <button id="fadeBtn">Fade</button>
+
+    <p id="myPara">This is a paragraph. Click buttons to apply jQuery effects.</p>
+
+    <textarea rows="6" cols="50" id="myText">
+You can type something here...
+    </textarea>
+    <script>
+$(document).ready(function(){
+    $("#hideBtn").click(function(){
+        $("#myPara, #myText").hide();
+    });
+
+    $("#showBtn").click(function(){
+        $("#myPara, #myText").show();
+    });
+
+    $("#toggleBtn").click(function(){
+        $("#myPara, #myText").toggle();
+    });
+
+    $("#fadeBtn").click(function(){
+        $("#myPara, #myText").fadeToggle();
+    });
+});
+</script>
+    </textarea>
+
+    <script>
+        $(document).ready(function(){
+            $("#hideBtn").click(function(){
+                $("#myPara, #myText").hide();
+            });
+
+            $("#showBtn").click(function(){
+                $("#myPara, #myText").show();
+            });
+
+            $("#toggleBtn").click(function(){
+                $("#myPara, #myText").toggle();
+            });
+
+            $("#fadeBtn").click(function(){
+                $("#myPara, #myText").fadeToggle();
+            });
+        });
+    </script>
+
+</body>
+</html>

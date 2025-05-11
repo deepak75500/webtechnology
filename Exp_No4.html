@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 4 - All Types of CSS</title>
+
+    <!-- Internal CSS -->
+    <style>
+        .internal-style {
+            color: blue;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Experiment 4: Types of CSS</h1>
+
+    <!-- Inline CSS -->
+    <p style="color: green; font-size: 16px;">This is styled using Inline CSS.</p>
+
+    <!-- Internal CSS -->
+    <p class="internal-style">This is styled using Internal CSS.</p>
+
+    <!-- External CSS -->
+    <p class="external-style">This is styled using External CSS.</p>
+
+    <hr>
+
+    <!-- Code Display -->
+    <h2>HTML Code Used:</h2>
+    <textarea rows="25" cols="100" readonly>
+<!-- Inline CSS -->
+<p style="color: green; font-size: 16px;">This is styled using Inline CSS.</p>
+
+<!-- Internal CSS (in head section) -->
+<style>
+    .internal-style {
+        color: blue;
+        font-weight: bold;
+        font-size: 18px;
+    }
+</style>
+<p class="internal-style">This is styled using Internal CSS.</p>
+
+<!-- External CSS (linked from style.css) -->
+<link rel="stylesheet" href="style.css">
+<p class="external-style">This is styled using External CSS.</p>
+    </textarea>
+
+</body>
+</html>

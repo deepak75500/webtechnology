@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 2 - HTML and DHTML</title>
+    <script>
+        // Simple DHTML Example: Show/Hide Image
+        function toggleImage() {
+            var img = document.getElementById("myImage");
+            if (img.style.display === "none") {
+                img.style.display = "block";
+            } else {
+                img.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Experiment 2: HTML & DHTML</h1>
+
+    <!-- Basic Text Formatting -->
+    <h2>Text Formatting</h2>
+    <p><b>Bold Text</b></p>
+    <p><i>Italic Text</i></p>
+    <p><u>Underlined Text</u></p>
+    <p><mark>Highlighted Text</mark></p>
+    <p><small>Small Text</small></p>
+    <p><strong>Strong Text</strong></p>
+
+    <!-- Image -->
+    <h2>Image Example</h2>
+    <button onclick="toggleImage()">Show/Hide Image</button><br><br>
+    <img id="myImage" src="https://via.placeholder.com/200" alt="Sample Image">
+
+    <!-- HTML Code Display -->
+    <h2>HTML Code Used:</h2>
+    <textarea rows="30" cols="100" readonly>
+<!-- Text Formatting -->
+<p><b>Bold Text</b></p>
+<p><i>Italic Text</i></p>
+<p><u>Underlined Text</u></p>
+<p><mark>Highlighted Text</mark></p>
+<p><small>Small Text</small></p>
+<p><strong>Strong Text</strong></p>
+
+<!-- DHTML (JavaScript) -->
+<button onclick="toggleImage()">Show/Hide Image</button>
+<img id="myImage" src="rec.jpg" alt="Sample Image">
+
+<script>
+    function toggleImage() {
+        var img = document.getElementById("myImage");
+        if (img.style.display === "none") {
+            img.style.display = "block";
+        } else {
+            img.style.display = "none";
+        }
+    }
+</script>
+    </textarea>
+
+</body>
+</html>

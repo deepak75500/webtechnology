@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <h1>Use php server to run this</h1>
+    <p>Save this as <u>arithmetic.php</u></u></p>
+    <title>PHP Arithmetic Operations</title>
+</head>
+<body>
+
+<h2>Arithmetic Calculator using PHP</h2>
+
+<form method="post">
+    Enter First Number: <input type="number" name="num1" required><br><br>
+    Enter Second Number: <input type="number" name="num2" required><br><br>
+    Select Operation:
+    <select name="operation">
+        <option value="add">Addition</option>
+        <option value="sub">Subtraction</option>
+        <option value="mul">Multiplication</option>
+        <option value="div">Division</option>
+    </select><br><br>
+    <input type="submit" value="Calculate">
+</form>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $num1 = floatval($_POST["num1"]);
+    $num2 = floatval($_POST["num2"]);
+    $op = $_POST["operation"];
+    $result = "";
+
+    switch ($op) {
+        case "add":
+            $result = $num1 + $num2;
+            echo "<h3>Result: $num1 + $num2 = $result</h3>";
+            break;
+        case "sub":
+            $result = $num1 - $num2;
+            echo "<h3>Result: $num1 - $num2 = $result</h3>";
+            break;
+        case "mul":
+            $result = $num1 * $num2;
+            echo "<h3>Result: $num1 × $num2 = $result</h3>";
+            break;
+        case "div":
+            if ($num2 != 0) {
+                $result = $num1 / $num2;
+                echo "<h3>Result: $num1 ÷ $num2 = $result</h3>";
+            } else {
+                echo "<h3 style='color:red;'>Cannot divide by zero</h3>";
+            }
+            break;
+    }
+}
+?>
+
+<h3>PHP Code:</h3>
+<textarea rows="30" cols="100" readonly>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;PHP Arithmetic Operations&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Arithmetic Calculator using PHP&lt;/h2&gt;
+
+&lt;form method="post"&gt;
+    Enter First Number: &lt;input type="number" name="num1" required&gt;&lt;br&gt;&lt;br&gt;
+    Enter Second Number: &lt;input type="number" name="num2" required&gt;&lt;br&gt;&lt;br&gt;
+    Select Operation:
+    &lt;select name="operation"&gt;
+        &lt;option value="add"&gt;Addition&lt;/option&gt;
+        &lt;option value="sub"&gt;Subtraction&lt;/option&gt;
+        &lt;option value="mul"&gt;Multiplication&lt;/option&gt;
+        &lt;option value="div"&gt;Division&lt;/option&gt;
+    &lt;/select&gt;&lt;br&gt;&lt;br&gt;
+    &lt;input type="submit" value="Calculate"&gt;
+&lt;/form&gt;
+
+&lt;?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $num1 = floatval($_POST["num1"]);
+    $num2 = floatval($_POST["num2"]);
+    $op = $_POST["operation"];
+    $result = "";
+
+    switch ($op) {
+        case "add":
+            $result = $num1 + $num2;
+            echo "&lt;h3&gt;Result: $num1 + $num2 = $result&lt;/h3&gt;";
+            break;
+        case "sub":
+            $result = $num1 - $num2;
+            echo "&lt;h3&gt;Result: $num1 - $num2 = $result&lt;/h3&gt;";
+            break;
+        case "mul":
+            $result = $num1 * $num2;
+            echo "&lt;h3&gt;Result: $num1 × $num2 = $result&lt;/h3&gt;";
+            break;
+        case "div":
+            if ($num2 != 0) {
+                $result = $num1 / $num2;
+                echo "&lt;h3&gt;Result: $num1 ÷ $num2 = $result&lt;/h3&gt;";
+            } else {
+                echo "&lt;h3 style='color:red;'&gt;Cannot divide by zero&lt;/h3&gt;";
+            }
+            break;
+    }
+}
+?&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea>
+
+</body>
+</html>
